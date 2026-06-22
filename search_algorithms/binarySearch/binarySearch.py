@@ -10,7 +10,6 @@ binarySearch:- only works in sorted list
 def binarySearch(arr, target):
     low = 0 # lowest pointer
     high = len(arr) - 1 # high pointer
-
     while low <= high:
         mid = low + (high - low) // 2 # define the mid pointer
         # checks target is present at mid
