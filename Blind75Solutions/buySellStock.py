@@ -49,3 +49,22 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
                 profit = max(currP, profit)
 
         return profit
+
+
+    def twoPointers(self, prices):
+        """
+        leveraging the two pointers technique where we declare two pointes and traverse the area
+        :param prices:
+        :return:
+        """
+
+        l, r = 0, 1
+        maxP = 0
+        while r < len(prices):
+            if prices[l] < prices[r]:
+                profit = prices[r] - prices[l]
+                maxP = max(maxP, profit)
+            else:
+                l = r
+            r += 1
+        return maxP
