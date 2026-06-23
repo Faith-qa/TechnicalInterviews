@@ -15,7 +15,7 @@ class Solution:
             x = target - curr
             if x in hmaps:
                 return([i, hmaps.get(x)])
-            hmaps[curr] = x
+            hmaps[curr] = i
         return
 
     def bruteforce_twosum(self, nums, target):
