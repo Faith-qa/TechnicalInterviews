@@ -24,6 +24,22 @@ class solution:
         return False
 
 
+    """sorting solution"""
+    def sorting_containsDup(self, nums):
+        """
+        sorting approach is the second best optimal sollution
+        given duplicates will always sync with each other
+        it has a space complexity of O(1)
+        and a time complexity of O(n log n)
+        because of the extra memory taken by sorting
+
+        """
+        sortNums = sorted(nums)
+
+        for i in range(1, len(sortNums)):
+            if sortNums[i] == sortNums[i-1]:
+                return True
+        return False
 
     def prev_buySellStock(self, prices):
         """optimal solution was dynamic programming"""
