@@ -40,6 +40,7 @@ class solution:
             if sortNums[i] == sortNums[i-1]:
                 return True
         return False
+    
 
     def prev_buySellStock(self, prices):
         """optimal solution was dynamic programming"""
